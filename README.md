@@ -1,6 +1,6 @@
-Some diverse resources on attention-mechanism 
+Learning resources and gathering on the concept of attention-mechanism 
 
-(1) Attention mechanism in the paper on transformers **Attention is all you need** https://arxiv.org/abs/1706.03762 
+(1) Attention mechanism in **Attention is all you need** https://arxiv.org/abs/1706.03762 (transformers)
 
 " An attention function can be described as mapping a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors. The output is computed as a weighted sum of the values, where the weight assigned to each value is computed by a compatibility function of the query with the corresponding key.
 
