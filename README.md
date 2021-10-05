@@ -144,4 +144,31 @@ overview of the model, at each time-step the decoder's output is combined with a
 
 <img src="https://user-images.githubusercontent.com/89974426/136005008-1c4b4d58-356c-41a0-b8ca-7c717118af67.png" width=60% height=60%>
 
+The decoder uses attention to selectively focus on parts of the input sequence, the attention takes a sequence of vectors as input for each example and returns an "attention" vector for each example. This attention layer is similar to a layers.GlobalAveragePoling1D but the attention layer performs a weighted average.
+
+<img src="https://user-images.githubusercontent.com/89974426/136006711-369794fa-32a4-43c0-819a-ea9a2dfbf219.png" width=60% height=60%>
+
+<img src="https://user-images.githubusercontent.com/89974426/136006595-aab5bc2f-4f0e-483f-b9ce-65019315aa4f.png" width=60% height=60%>
+
+<img src="https://user-images.githubusercontent.com/89974426/136006807-53b08702-0b79-4bed-b2a7-d5e38ed2eec5.png" width=60% height=60%>
+
+<img src="https://user-images.githubusercontent.com/89974426/136006984-96d81c32-73ea-4424-acd3-2b255e2fd265.png" width=60% height=60%>
+
+**how the decoder works**
+
+the decoder's job is to generate predictions for the next output token.
+
+1.The decoder receives the complete encoder output.
+ 
+2.It uses an RNN to keep track of what it has generated so far.
+
+3.It **uses its RNN output as the query to the attention over the encoder's output, producing the context vector.**
+
+4.It **combines the RNN output and the context vector** using Equation 3 (below) to **generate the "attention vector".**
+
+5.It **generates logit predictions for the next token based on the "attention vector".**
+
+<img src="https://user-images.githubusercontent.com/89974426/136008180-6988ecfe-7e92-4d7e-afdf-5a76bf78db44.png" width=60% height=60%>
+
+
 
