@@ -1,4 +1,4 @@
-### learning resources, gatherings on the concept of attention-mechanism
+### learning around the concept of attention-mechanism
 
 **(1)** illustrating attention, NMT in https://www.tensorflow.org/text/tutorials/nmt_with_attention
 
